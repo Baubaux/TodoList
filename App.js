@@ -60,6 +60,11 @@ export default function App() {
     setTasks(tmpTasks);
   }
 
+  const validateTask = (taskCompleted) => {
+    const tmpTasks = tasks.reverse(task => task.completed ==taskCompleted);
+    setTasks(tmpTasks);
+  }
+
   if(!fontsLoaded) {
     return(<AppLoading/>) 
   }

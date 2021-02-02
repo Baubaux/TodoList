@@ -1,6 +1,7 @@
 import React from 'react'
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { validate } from 'uuid'
 
 
 const Task = ({item, deleteTask}) => {
@@ -22,8 +23,9 @@ const Task = ({item, deleteTask}) => {
         { cancelable: false }
     )
 
-    const check = () => {
-
+    const check = ({item, validateTask}) => {
+        console.log("valider la tâche ?")
+        onPress: () => styles.taskCompleted
     }
 
     return (
